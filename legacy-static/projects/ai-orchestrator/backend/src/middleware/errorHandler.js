@@ -1,0 +1,15 @@
+const logger = require('../utils/logger');
+
+const errorHandler = (err, req, res, next) => {
+  logger.error(`${err.message} - ${req.originalUrl} - ${req.method} - ${req.ip}`);
+
+  const statusCode = err.statusCode || 500;
+  res.status(statusCode).json({
+    status: 'error',
+    statusCode,
+    message: statusCode === 500 ? 'Internal Server Error' : err.message,
+    ...(process.env.NODE_ENV === 'development' && { stack: err.stack }),
+  });
+};
+
+module.exports = errorHandler;

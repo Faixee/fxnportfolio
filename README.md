@@ -1,88 +1,36 @@
-# Portfolio - The GOAT Edition 🚀
-
-A stunning, animated portfolio website showcasing AI/ML engineering expertise with modern web technologies.
-
-## Features
-
-- ✨ **Animated Background** - Dynamic particle system and floating elements
-- 🎨 **Modern Design** - Glassmorphism effects with gradient animations
-- 📱 **Responsive Layout** - Optimized for all devices
-- ⚡ **Performance Optimized** - Smooth animations and fast loading
-- 🎯 **Interactive Elements** - Cursor trail, smooth scrolling, and hover effects
-
-## Technologies Used
-
-- **HTML5** - Semantic markup
-- **CSS3** - Advanced animations and modern styling
-- **JavaScript (ES6+)** - Interactive functionality
-- **Canvas API** - Particle system
-- **CSS Grid & Flexbox** - Responsive layouts
-
-## Sections
-
-1. **Hero** - Animated title with auto-typing effect
-2. **About** - Professional summary with animated stats
-3. **Experience** - Interactive timeline
-4. **Skills** - Animated progress bars
-5. **Projects** - Portfolio showcase
-6. **Contact** - Interactive form
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-1. Clone the repository:
+First, run the development server:
+
 ```bash
-git clone <your-repo-url>
-cd portfolio
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-2. Open `index.html` in your browser or use a local server:
-```bash
-# Using Python
-python -m http.server 8000
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-# Using Node.js
-npx serve .
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-3. Visit `http://localhost:8000` in your browser
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Deployment
+## Learn More
 
-### GitHub Pages (Recommended)
+To learn more about Next.js, take a look at the following resources:
 
-1. Push your code to GitHub
-2. Go to repository Settings > Pages
-3. Select source branch (usually `main`)
-4. Your site will be available at `https://username.github.io/repository-name`
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-### Netlify
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-1. Drag and drop the project folder to [Netlify](https://netlify.com)
-2. Get instant deployment with custom domain support
+## Deploy on Vercel
 
-### Vercel
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. Connect your GitHub repository to [Vercel](https://vercel.com)
-2. Automatic deployments on every push
-
-## Customization
-
-- Update personal information in `index.html`
-- Modify colors in CSS variables (`:root` section)
-- Add your own projects and experience
-- Customize animations and effects
-
-## Browser Support
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-
-## License
-
-MIT License - feel free to use this template for your own portfolio!
-
----
-
-**Built with ❤️ and modern web technologies** 
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

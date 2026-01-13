@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen AI Studio | Enterprise Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="logo">GenAI<span class="highlight">.Studio</span></div>
+            <nav>
+                <div class="nav-item active"><i class="fas fa-pen-fancy"></i> Content Gen</div>
+                <div class="nav-item"><i class="fas fa-image"></i> Image Gen</div>
+                <div class="nav-item"><i class="fas fa-code"></i> Code Assist</div>
+                <div class="nav-item"><i class="fas fa-history"></i> History</div>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">FM</div>
+                <div class="user-info">
+                    <span>Faizan Murtuza</span>
+                    <small>Pro Plan</small>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <header>
+                <h1>Creative Suite</h1>
+                <div class="status-indicator"><i class="fas fa-check-circle"></i> LLM Online</div>
+            </header>
+
+            <div class="workspace">
+                <div class="config-panel">
+                    <div class="form-group">
+                        <label>Core Prompt</label>
+                        <textarea id="promptInput" placeholder="Describe the content you want to generate..."></textarea>
+                    </div>
+                    
+                    <div class="controls-row">
+                        <div class="form-group">
+                            <label>Tone / Style</label>
+                            <select id="styleInput">
+                                <option value="professional">Professional / Corporate</option>
+                                <option value="creative">Creative / Visionary</option>
+                                <option value="technical">Technical / Concise</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Length</label>
+                            <select id="lengthInput">
+                                <option value="short">Short (Tweet/Headline)</option>
+                                <option value="medium" selected>Medium (Paragraph)</option>
+                                <option value="long">Long (Article Section)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button id="generateBtn" class="generate-btn">
+                        <i class="fas fa-magic"></i> GENERATE CONTENT
+                    </button>
+                </div>
+
+                <div class="preview-panel">
+                    <div class="panel-header">
+                        <span>Output Preview</span>
+                        <div class="actions">
+                            <button class="icon-btn"><i class="fas fa-copy"></i></button>
+                            <button class="icon-btn"><i class="fas fa-download"></i></button>
+                        </div>
+                    </div>
+                    <div class="output-content" id="outputContent">
+                        <div class="placeholder-text">AI generated content will appear here...</div>
+                    </div>
+                    <div class="meta-info hidden" id="metaInfo">
+                        <span><i class="fas fa-robot"></i> GPT-4-Turbo</span>
+                        <span><i class="fas fa-bolt"></i> <span id="tokenCount">0</span> Tokens</span>
+                        <span><i class="fas fa-clock"></i> <span id="latency">0</span>ms</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

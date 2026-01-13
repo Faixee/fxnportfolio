@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDP System | Enterprise Edition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">IDP<span class="highlight">.Core</span></div>
+            <div class="status-badge"><i class="fas fa-circle"></i> SYSTEM ONLINE</div>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <h2>Document Ingestion</h2>
+                <div class="drop-zone" id="dropZone">
+                    <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                    <p>Drag & Drop secure documents or <span class="browse-btn">Browse System</span></p>
+                    <input type="file" id="fileInput" hidden>
+                </div>
+                <button id="analyzeBtn" class="action-btn" disabled>INITIATE ANALYSIS</button>
+            </div>
+
+            <div class="results-section hidden" id="resultsSection">
+                <div class="processing-overlay" id="processingOverlay">
+                    <div class="scanner-line"></div>
+                    <div class="status-text">NEURAL NET PROCESSING...</div>
+                    <div class="stage-indicator" id="stageIndicator">Initializing...</div>
+                </div>
+
+                <div class="data-display hidden" id="dataDisplay">
+                    <div class="result-header">
+                        <h3>Extraction Results</h3>
+                        <span class="confidence-badge">Confidence: <span id="confScore">0%</span></span>
+                    </div>
+                    
+                    <div class="grid-layout">
+                        <div class="data-card">
+                            <label>Classification</label>
+                            <div class="value" id="docClass">--</div>
+                        </div>
+                        <div class="data-card">
+                            <label>Entity: Org</label>
+                            <div class="value" id="entOrg">--</div>
+                        </div>
+                        <div class="data-card">
+                            <label>Entity: Amount</label>
+                            <div class="value" id="entAmt">--</div>
+                        </div>
+                        <div class="data-card">
+                            <label>Processing Time</label>
+                            <div class="value" id="procTime">--</div>
+                        </div>
+                    </div>
+
+                    <div class="json-viewer">
+                        <pre id="jsonOutput">// Raw JSON Payload</pre>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

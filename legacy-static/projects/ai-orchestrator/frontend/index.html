@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Orchestrator - Enterprise PoC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">AI Orchestrator <span class="badge">Enterprise</span></div>
+            <nav>
+                <span id="status-indicator" class="status-online">System Online</span>
+            </nav>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <h2>Task Orchestration</h2>
+                <div class="input-group">
+                    <label for="taskType">Orchestration Mode</label>
+                    <select id="taskType">
+                        <option value="summarize">Summarization Engine</option>
+                        <option value="classify">Classification Logic</option>
+                        <option value="translate">Translation Pipeline</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="payload">Input Payload</label>
+                    <textarea id="payload" placeholder="Enter data for AI processing..."></textarea>
+                </div>
+
+                <button id="executeBtn" class="primary-btn">Execute Orchestration</button>
+            </section>
+
+            <section class="monitor-panel">
+                <h2>Real-time Monitoring</h2>
+                <div id="loader" class="hidden">
+                    <div class="spinner"></div>
+                    <p>Orchestrating AI Resources...</p>
+                </div>
+                <div id="result" class="hidden">
+                    <div class="result-header">
+                        <h3>Execution Output</h3>
+                        <span id="timestamp"></span>
+                    </div>
+                    <div class="output-box" id="outputBox"></div>
+                    <div class="metadata-grid" id="metadataGrid"></div>
+                </div>
+                <div class="log-viewer">
+                    <h3>System Logs</h3>
+                    <div id="logs" class="log-container">
+                        <div class="log-entry info">System initialized. Ready for tasks.</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
