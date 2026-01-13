@@ -1,0 +1,57 @@
+[build]
+command = "npm run build"
+
+[build.environment]
+NODE_VERSION = "20"
+NEXT_TELEMETRY_DISABLED = "1"
+
+[[plugins]]
+package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+from = "/index.html"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/assets/*"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/projects"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/projects/*"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/experience"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/skills"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/testimonials"
+to = "/"
+status = 301
+force = true
+
+[[redirects]]
+from = "/contact"
+to = "/"
+status = 301
+force = true
